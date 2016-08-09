@@ -1,8 +1,8 @@
 #!/bin/sh
 ## "This was brought back to life using the old naming style 'mon0, mon1, mon2, etc' but able to still get the bleeding edge functionality required by kismet"
-## "The was recreated and remaster by none other than the legendary kloption" 
+## "It was recreated and remaster by none other than the legendary kloption" 
 ## "The Shell is only the beginning so let the bashing begin"
-## "ENJOY"
+## "ENJOY and MOST of ALL Do what you do"
 ##
 USERID=""
 IFACE=""
