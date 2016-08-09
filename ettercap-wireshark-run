@@ -1,9 +1,8 @@
 #!/bin/bash
-
-# default vars
+# Default Variables
 target_ip_default="/"
 target_host_default="/"
-#target_host_default="/10.67.40.254"
+# target_host_default="/10.67.40.254"
 target_port_default=""
 target_mac_default=""
 etterargs_default="-TqM"
@@ -14,8 +13,7 @@ sslstrip="-P sslstrip"
 plugins_default="$autoadd $sslstrip"
 interface_default="eth0"
 x-terminal-emulator="/usr/bin/x-terminal-emulator"
-
-#colors
+# Colors
 dgrey="\033[0;34m"
 port="\033[0;33m"
 RED="\033[1;31m"
@@ -27,15 +25,6 @@ CYAN="\033[1;36m"
 WHITE="\033[1:37m"
 ENDCOLOR="\033[0m"
 clear
-echo -e $RED" #################################################################"$ENDCOLOR;
-echo -e $YELLOW"    ____     ___    __  ____       __  _             ____  ____"$ENDCOLOR;
-echo -e $YELLOW"   / __/__  / (_)__/ / / __ \___  / /_(_)__  ___    / __ \/ __/"$ENDCOLOR;
-echo -e $YELLOW"  _\ \/ _ \/ / / _  / / /_/ / _ \/ __/ / _ \/ _ \  / /_/ /\ \  "$ENDCOLOR;
-echo -e $YELLOW" /___/\___/_/_/\_,_/  \____/ .__/\__/_/\___/_//_/  \____/___/  "$ENDCOLOR;
-echo -e $YELLOW"                          /_/                                  "$ENDCOLOR;
-echo -e $RED" #################################################################"$ENDCOLOR;
-echo ""
-echo ""
 echo -e $CYAN"Advanced Ettercap Capture with sslstrip"$ENDCOLOR;
 sleep 1
 echo ""
@@ -58,16 +47,16 @@ echo ""
 
 #fi
 
-read -p "Enter the target IP address [$target_ip_default]: " target_ip
+read -p "Enter MITM Victum's IP address [$target_ip_default]: " target_ip
 target_ip=${target_ip:-$target_ip_default}
 
-echo -e $BLUE"Target IP set to '$target_ip'"$ENDCOLOR;
+echo -e $BLUE"MITM Victum's IP set to '$target_ip'"$ENDCOLOR;
 echo ""
 
-read -p "Enter the target host name [$target_host_default]: " target_host
+read -p "Enter MITM Host IP Address [$target_host_default]: " target_host
 target_host=${target_host:-$target_host_default} 
 
-echo -e $BLUE"Target host set to '$target_host'"$ENDCOLOR;
+echo -e $BLUE"MITM Target host set to '$target_host'"$ENDCOLOR;
 echo ""
 	
 read -p "Enter the ettercap arguments [$etterargs_default]: " etterargs 
@@ -88,16 +77,16 @@ plugins=${plugins:-$plugins_default}
 echo -e $BLUE"Using '$plugins'"$ENDCOLOR
 echo ""
 
-read -p "Select visual format [$visual_format_default]: " visual_format 
+read -p "Select Packet Visualization [$visual_format_default]: " visual_format 
 visual_format=${visual_format:-$visual_format_default}
 
-echo -e $BLUE"Visual format set to '$visual_format'" $ENDCOLOR;
+echo -e $BLUE"Packet Visualization set to '$visual_format'" $ENDCOLOR;
 echo ""
 
-read -p "Capture on what interface [$interface_default]: " interface
+read -p "Choose Network Interface Initiating ArpPoisioning [$interface_default]: " interface
 interface=${interface:-$interface_default}
 
-echo -e $BLUE"Capture interface set to '$interface'" $ENDCOLOR
+echo -e $BLUE" Network Interface Initiating ArpPoisioning '$interface'" $ENDCOLOR
 echo ""
 
 # Execute
