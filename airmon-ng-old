@@ -1,5 +1,9 @@
 #!/bin/sh
-## this is the original older version of airmon-ng that you can use to create multiple monitor interfacees (i.e. mon)
+## "This was brought back to life using the old naming style 'mon0, mon1, mon2, etc' but able to still get the bleeding edge functionality required by kismet"
+## "The was recreated and remaster by none other than the legendary kloption" 
+## "The Shell is only the beginning so let the bashing begin"
+## "ENJOY"
+##
 USERID=""
 IFACE=""
 KISMET=/etc/kismet/kismet.conf
@@ -1331,5 +1335,4 @@ echo
 if [ $UDEV_ISSUE != 0 ] ; then
 	echo udev renamed the interface. Read the following for a solution:
 	echo http://www.aircrack-ng.org/doku.php?id=airmon-ng#interface_athx_number_rising_ath0_ath1_ath2...._ath45
-	echo 
 fi
