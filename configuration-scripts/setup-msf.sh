@@ -90,8 +90,8 @@ sleep 0.5
 cd ~/rbenv
 pwd
 sleep 1
-rbenv install 2.1.7
-rbenv global 2.1.7
+rbenv install 2.5.1
+rbenv global 2.5.1
 ruby -v
 sleep 1
 
